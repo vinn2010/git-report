@@ -42,7 +42,7 @@ if ($arr_of_dates) {
     global $dates_table;
     preg_match("/(?<=\-)(.*)(?=\-)/", $item, $match);
 
-    return preg_replace("/" . $match{0} . "/", $dates_table{$match{0}}, $item);
+    return preg_replace("/" . $match[0] . "/", $dates_table[$match[0]], $item);
   }, $arr_of_dates);
 
   $vals = array_count_values($res);
