@@ -9,13 +9,10 @@
 $records = (int)$argv[2];
 
 if($argc < 3 || $argc > 3 || $argv[1] != "-d" || $records === 0) {
-  $error = <<<EOD
-    Usage: ./git-report.php -d 10
-    -d | number of days you wish to see the report
-    -d must be more than 0
-    EOD;
-
-  die($error);
+  echo "Usage: ./git-report.php -d 10\n";
+  echo "-d | number of days you wish to see the report\n";
+  echo "-d must be more than 0\n";
+  die();
 };
 
 $dates_table =  [
@@ -45,7 +42,7 @@ if ($arr_of_dates) {
     global $dates_table;
     preg_match("/(?<=\-)(.*)(?=\-)/", $item, $match);
 
-    return preg_replace("/" . $match[0] . "/", $dates_table[$match[0]], $item);
+    return preg_replace("/" . $match{0} . "/", $dates_table{$match{0}}, $item);
   }, $arr_of_dates);
 
   $vals = array_count_values($res);
@@ -60,5 +57,5 @@ if ($arr_of_dates) {
     };
     echo $date . " - " . $val . "\n";
   };
-}
-
+} 
+?>
