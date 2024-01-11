@@ -3,16 +3,19 @@
 # https://www.thebackedengineer.com - helping business build web software.
 #
 
-# Introduction
+## Introduction
+---------------
 
-I like to track the my productivity by monitoring how often I ship to users.
+I like to track my programming productivity by monitoring how often I ship to users. 
+
 That is, how many commits to main branches. 
 
 I write an article about it here: <link>
 
-# basic usage:
+## basic usage:
+--------------
 
-while inside a git repo, type:
+While inside a git repo, type:
 
 ./git-report.php -d 3
 
@@ -22,6 +25,7 @@ This will how you a report of the last 3 days of commits to main branches.
 2024-1-5 - 10
 2024-1-4 - 4
 
-# Installation
+## Installation
+---------------
 
 Script relies on git, rig-grep and awk.
