@@ -1,17 +1,14 @@
 #!/usr/bin/php
 <?php
 
-/**
- * @var int $third takes the third value from argv and converts to int
- * @return int returns 0 if non string passed originally or more than 0 if
- * number
- */
+// ensure argv[2] input value is a number
 $records = (int)$argv[2];
 
 if($argc < 3 || $argc > 3 || $argv[1] != "-d" || $records === 0) {
   echo "Usage: ./git-report.php -d 10\n";
   echo "-d | number of days you wish to see the report\n";
   echo "-d must be more than 0\n";
+
   die();
 };
 
@@ -57,5 +54,4 @@ if ($arr_of_dates) {
     };
     echo $date . " - " . $val . "\n";
   };
-} 
-?>
+}
